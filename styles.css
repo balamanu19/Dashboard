@@ -1,0 +1,315 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+/* Container styling */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 10px 20px;
+
+
+}
+
+/* Dropdown styling */
+.nav-right select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-right select:hover {
+    border-color: #007bff;
+}
+
+/* Search box container */
+.search-box {
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.search-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Search input */
+.search-box input {
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+    font-size: 14px;
+    width: 180px;
+}
+
+.search-box input::placeholder {
+
+    font-weight: 500;
+}
+
+/* Search button */
+.search-box .search-icon {
+    border: none;
+    background-color: #ecedee;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-box .search-icon:hover {
+    background-color: #0056b3;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.card.small {
+    width: 200px;
+}
+
+.yellow {
+    background: #fff7cc;
+}
+
+.gold {
+    background: #f5f0d5;
+}
+
+.blue {
+    background: #e6f2ff;
+}
+
+.purple {
+    background: #f3e6ff;
+}
+
+
+
+.grid {
+    display: flex;
+    gap: 20px;
+    /* space between cards */
+    margin-top: 20px;
+}
+
+.card.wide {
+    grid-column: span 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+
+
+.grid .card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Recommendations List Styling */
+.grid .card ul {
+    list-style: disc inside;
+    padding: 0;
+    margin: 0;
+}
+
+.grid .card ul li {
+    margin-bottom: 2px;
+    /* gap between list items */
+    line-height: 1.6;
+    /* improve readability */
+    font-size: 15px;
+}
+
+.benchmarks .bench-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.bench-text h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.bench-text .selected {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.benchmarks canvas {
+    flex: 1;
+    max-width: 260px;
+    /* chart width */
+    height: 160px !important;
+}
+
+footer.footer {
+    background: #1f2937;
+    /* Dark gray */
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer.footer .footer-links {
+    margin-top: 10px;
+}
+
+footer.footer .footer-links a {
+    color: #9ca3af;
+    /* Light gray */
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer.footer .footer-links a:hover {
+    color: #fff;
+}
+
+.live-btn {
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.live-btn:hover {
+    background: #1565c0;
+}
+
+/*live code */
+.chat-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.chat-output {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 10px;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px 14px;
+    border-radius: 10px;
+    max-width: 75%;
+}
+
+.user-message {
+    background: #1e88e5;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #f1f3f4;
+    color: #333;
+    align-self: flex-start;
+}
+
+.chat-input-box {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.chat-input-box button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chat-input-box button:hover {
+    background: #218838;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="customer.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>Customer Dashboard</h1>
+      <div class="nav-right">
+        <span>Welcome, Admin</span>
+        <button class="live-btn" onclick="window.location.href='live.html'">
+          Live
+        </button>
+      </div>
+    </header>
+
+    <button class="scroll-top-btn" onclick="scrollToTop()">
+      <a href="index.html" class="scroll-top-btn">Go to Home Page</a>
+    </button>
+
+    <!-- Cards Section -->
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Total Customers</h3>
+        <p>1,250</p>
+        <small>↑ 15%</small>
+      </div>
+      <div class="card">
+        <h3>Active Customers</h3>
+        <p>1,050</p>
+        <small>↓ 5%</small>
+      </div>
+      <div class="card">
+        <h3>Average TrustScore</h3>
+        <p>88</p>
+        <small>↑ 3%</small>
+      </div>
+      <div class="card">
+        <h3>Platinum Tier Customers</h3>
+        <p>450</p>
+        <small>↑ 8%</small>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="dashboard-charts">
+      <div class="chart-container">
+        <h3>TrustScore Trends</h3>
+        <canvas id="customerTrustChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Engagement Trend</h3>
+        <canvas id="customerEngagementChart"></canvas>
+      </div>
+    </div>
+
+    <script src="customer.js"></script>
+    <script>
+      function scrollToTop() {
+        window.location.href = "index.html";
+      }
+
+      const trustCtx = document
+        .getElementById("customerTrustChart")
+        .getContext("2d");
+      const engagementCtx = document
+        .getElementById("customerEngagementChart")
+        .getContext("2d");
+
+      new Chart(trustCtx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+          datasets: [
+            {
+              label: "TrustScore",
+              data: [92, 88, 81, 95, 77, 85, 90, 87],
+              borderColor: "rgba(93, 173, 226, 0.9)",
+              backgroundColor: "rgba(93, 173, 226,0.2)",
+              fill: true,
+              tension: 0.4,
+              pointBackgroundColor: "rgba(93, 173, 226,1)",
+              pointRadius: 5,
+              pointHoverRadius: 7,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: "#eaeaea" } },
+            x: { grid: { color: "#f5f5f5" } },
+          },
+        },
+      });
+
+      new Chart(engagementCtx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+          datasets: [
+            {
+              label: "Engagement (%)",
+              data: [65, 70, 68, 75, 72, 80, 78, 82],
+              borderColor: "rgba(72, 201, 176,0.9)",
+              backgroundColor: "rgba(72, 201, 176,0.2)",
+              fill: true,
+              tension: 0.4,
+              pointBackgroundColor: "rgba(72, 201, 176,1)",
+              pointRadius: 5,
+              pointHoverRadius: 7,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: "#eaeaea" } },
+            x: { grid: { color: "#f5f5f5" } },
+          },
+        },
+      });
+    </script>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2025 Trust & Growth. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

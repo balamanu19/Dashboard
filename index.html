@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Trust & Growth Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <h2> Trust & Growth Dashboard</h2>
+      <div class="nav-right">
+ <select id="pageSelect">
+      <option value="" disabled selected>Select</option>
+      <option value="customer.html">Customer</option>
+      <option value="merchant.html">Merchant</option>
+    </select>
+
+ <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search by name or data type" />
+  <button class="search-icon" onclick="performSearch()">🔍</button>
+</div>
+   <button class="live-btn" onclick="window.location.href='live.html'">Live</button>
+  
+</div>
+
+      </div>
+    </header>
+
+    <main>
+      <!-- Top Cards -->
+      <section class="cards" >
+        <div class="card yellow" data-keywords="trustscore score platinum">
+          <p>TrustScore</p>
+          <h2>94</h2>
+
+          <small
+            >XYZ Inc has a TrustScore of 94 and is in the Platinum tier.</small
+          >
+        </div>
+        <div class="card gold"  data-keywords="loyaltytier platinum tier">
+          <p>LoyaltyTier</p>
+          <h2>Platinum</h2>
+
+          <small
+            >XYZ Inc has a TrustScore of 94 and is in the Platinum tier.</small
+          >
+        </div>
+        <div class="card blue" data-keywords="transactionvolume volume">
+          <p>TransactionVolume</p>
+          <h2>1,200</h2>
+
+          <small
+            >XYZ Inc has a TrustScore of 94 and is in the Platinum tier.</small
+          >
+        </div>
+        <div class="card purple" data-keywords="engagementscore engagement">
+          <p>EngagementScore</p>
+          <h2>89</h2>
+
+          <small
+            >XYZ Inc has a TrustScore of 94 and is in the Platinum tier.</small
+          >
+        </div>
+      </section>
+
+      <section class="grid">
+      <div class="card wide chart-container" data-keywords="historical trends chart history">
+          <h3>Historical Trends</h3><br>
+          <canvas id="historyChart"></canvas>
+        </div>
+       <div class="card table-container" data-keywords="leaderboard table">
+          <h3>Leaderboard</h3><br>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>TrustScore</th>
+                <th>LoyaltyTier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ABC Corp</td>
+                <td>98</td>
+                <td>Platinum</td>
+              </tr>
+              <tr>
+                <td>XYZ Inc</td>
+                <td>94</td>
+                <td>Platinum</td>
+              </tr>
+              <tr>
+                <td>Acme Ltd.</td>
+                <td>89</td>
+                <td>Gold</td>
+              </tr>
+              <tr>
+                <td>QRS LLC</td>
+                <td>85</td>
+                <td>Gold</td>
+              </tr>
+              <tr>
+                <td>LMN Co.</td>
+                <td>92</td>
+                <td>Silver</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Recommendations + Benchmarks -->
+      <section class="grid">
+      <div class="card recommendations" data-keywords="recommendations suggestions advice">
+  
+          <h3>Recommendations</h3>
+          <ul>
+            <li>Focus on timely repayments to improve your TrustScore</li>
+            <li>Eligible for higher loan limits and premium offers</li>
+            <li>Reduce disputes for smoother transactions</li>
+          </ul>
+        </div>
+        <!-- Benchmarks -->
+       <div class="card benchmarks" data-keywords="benchmarks merchant chart">
+          <div class="bench-header">
+            <div class="bench-text">
+              <h3>Merchant</h3>
+              <p class="selected">Selected Merchant</p>
+            </div>
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 Trust & Growth. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

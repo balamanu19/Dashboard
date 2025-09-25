@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h2>Live Assistant</h2>
+      <button class="live-btn" onclick="window.location.href='index.html'">
+        Back
+      </button>
+    </header>
+
+    <main class="chat-container">
+      <div id="chatOutput" class="chat-output"></div>
+
+      <div class="chat-input-box">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Ask me anything about your data..."
+        />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </main>
+
+    <script src="live.js"></script>
+  </body>
+</html>
